@@ -8,10 +8,8 @@ body {
     background: lightblue;
 }
 
-.grid { 
-    width: 140vh;
-    height: 80vh;
-    background: #fff;
+.grid {
+    width: 100%;
     margin: 0px;
 
     /* Center on the div*/
@@ -19,28 +17,31 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
-    box-shadow: 0px 10px 50px #0000004d;
+    text-align: center;
     overflow: hidden;
     
     /* Grid display */
     display: grid;
-    grid-template: repeat(20, 1fr) / repeat(36, 1fr);
+}
+
+.row {
+    height: 2.5vh;
 }
 
 .box
 {
+    display: inline-block;
     user-select: none;
-    border: 1px solid #000000;
-    font-family: Helvetica;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    height: 100%;
+    width: 2.5vh;
+    border: 1px solid #444;
+    background-color: #fff;
 }
 
-.wall {background-color: black;}
-.box:hover {background-color: yellow;}
+.wall {
+    background-color: #444;
+}
 
 .starter {background-color: red;}
 .final {background-color: blue;}
