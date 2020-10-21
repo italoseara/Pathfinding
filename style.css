@@ -9,11 +9,10 @@ body {
 }
 
 .grid { 
-    width: 80%;
-    height: 80%;
+    width: 140vh;
+    height: 80vh;
     background: #fff;
-    margin:0px;
-    position: absolute;
+    margin: 0px;
 
     /* Center on the div*/
     position: absolute;
@@ -21,7 +20,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 50px #0000004d;
     overflow: hidden;
     
     /* Grid display */
@@ -33,15 +32,14 @@ body {
 {
     user-select: none;
     border: 1px solid #000000;
-    border-radius: 2px;
     font-family: Helvetica;
     font-weight: bold;
-    font-size: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.wall {background-color: black;}
 .box:hover {background-color: yellow;}
 
 .starter {background-color: red;}

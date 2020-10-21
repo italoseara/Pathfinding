@@ -1,6 +1,10 @@
-drawCanvas()
+var walling = false;
+var currentBox;
 
-function drawCanvas(){
+drawBoxes()
+setInterval(update, 100);
+
+function drawBoxes(){
     var boxes = '';
     var starter = [10, 7];
     var final = [10, 28]
@@ -16,3 +20,15 @@ function drawCanvas(){
     document.querySelector('.grid').innerHTML = boxes;
 }
 
+function update() {
+    document.querySelector('.starter').classList.remove('wall');
+    document.querySelector('.final').classList.remove('wall');
+}
+
+document.querySelector('.grid').addEventListener('mousedown', () => { walling = true; currentBox.classList.add('wall');})
+document.querySelector('.grid').addEventListener('mouseup', () => walling = false)
+document.querySelector('.grid').addEventListener('mousemove', () => {
+    currentBox = document.querySelector('.box:hover');
+    if (!walling) return;
+    currentBox.classList.add('wall');
+})
